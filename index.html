@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Generator</h1>
+        <div class="form-section">
+            <label>Name:</label>
+            <input type="text" id="name">
+            <label>Email:</label>
+            <input type="email" id="email">
+            <label>Summary:</label>
+            <textarea id="summary"></textarea>
+            <button onclick="generateResume()">Preview</button>
+            <button onclick="downloadPDF()">Download PDF</button>
+            <label>Theme:</label>
+            <select id="themeSelector" onchange="changeTheme(this.value)">
+                <option value="modern">Modern</option>
+                <option value="classic">Classic</option>
+                <option value="minimalist">Minimalist</option>
+            </select>
+        </div>
+        <div id="resumePreview" class="resume"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
